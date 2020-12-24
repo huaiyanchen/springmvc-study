@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springmvc-01-servlet</module>
+        <module>springmvc-02-annotation</module>
     </modules>
 
     <properties>
@@ -44,7 +45,6 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
