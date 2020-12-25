@@ -10,13 +10,21 @@
        http://www.springframework.org/schema/mvc
        https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+    <!--    开启处理器映射器和处理器适配器-->
     <mvc:annotation-driven/>
+    <!--    注解扫描开启
+             自动扫描指定的包，下面所有注解类交给IOC容器管理
+             @Controller
+    -->
     <context:component-scan base-package="com.chy.controller"/>
     <mvc:default-servlet-handler/>
 
+    <!--    设置视图解析器
+            在前后端分离种不需要加入个
+            @RestController直接返回给前端一个需要的字符串
+     -->
     <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
 </beans>
